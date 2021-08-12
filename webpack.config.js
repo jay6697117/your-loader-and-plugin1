@@ -15,7 +15,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/', //确保文件资源能够在 http://localhost:3000 下正确访问
+    publicPath: './', //确保文件资源能够在 http://localhost:3000 下正确访问
   },
   // 开发者工具 source-map
   devtool: 'inline-source-map',
@@ -27,10 +27,10 @@ module.exports = {
   // loader配置
   module: {
     rules: [
-      {
-        test: /\.txt$/,
-        use: ['uppercase-loader', 'reverse-loader'],
-      },
+      // {
+      //   test: /\.txt$/,
+      //   use: ['uppercase-loader', 'reverse-loader'],
+      // },
     ],
   },
   plugins: [
